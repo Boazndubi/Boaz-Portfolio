@@ -49,13 +49,19 @@ function Skills() {
 
       {/* Skill Bars */}
       <div className="grid md:grid-cols-3 gap-8 mb-16">
-        {skillCategories.map((category) => (
-          <div key={category.title} className="glass-card p-6">
+        {skillCategories.map((category, catIndex) => (
+          <div
+            key={category.title}
+            className="glass-card p-6"
+            style={{
+              animationDelay: `${catIndex * 150}ms`,
+            }}
+          >
             <h3 className="text-lg font-semibold text-white mb-6">
               {category.title}
             </h3>
             <div className="space-y-4">
-              {category.skills.map((skill) => (
+              {category.skills.map((skill, skillIndex) => (
                 <div key={skill.name}>
                   <div className="flex justify-between mb-1">
                     <span className="text-sm text-slate-300">{skill.name}</span>
@@ -67,6 +73,7 @@ function Skills() {
                       style={{
                         width: `${skill.level}%`,
                         background: 'linear-gradient(90deg, #6366f1, #14b8a6)',
+                        transitionDelay: `${skillIndex * 100}ms`,
                       }}
                     />
                   </div>
@@ -77,20 +84,35 @@ function Skills() {
         ))}
       </div>
 
-      {/* Tech Tags */}
-      <div className="text-center">
-        <h3 className="text-lg font-semibold text-white mb-6">
-          Tech Stack
-        </h3>
-        <div className="flex flex-wrap justify-center gap-3">
-          {technologies.map((tech) => (
-            <span
-              key={tech}
-              className="px-4 py-2 bg-white/5 border border-white/10 rounded-lg text-sm text-slate-300 hover:border-[#6366f1]/50 hover:text-white hover:bg-[#6366f1]/10 transition-all cursor-default"
-            >
-              {tech}
-            </span>
-          ))}
+      {/* Floating decorative elements */}
+      <div className="relative">
+        <div
+          className="absolute -top-10 -left-10 w-24 h-24 rounded-full border border-[#6366f1]/10 animate-float-slow hidden lg:block"
+          style={{ animationDelay: '-3s' }}
+        />
+        <div
+          className="absolute -bottom-10 -right-10 w-20 h-20 rounded-2xl border border-[#14b8a6]/10 animate-float hidden lg:block"
+          style={{ animationDelay: '-7s' }}
+        />
+
+        {/* Tech Tags */}
+        <div className="text-center relative z-10">
+          <h3 className="text-lg font-semibold text-white mb-6">
+            Tech Stack
+          </h3>
+          <div className="flex flex-wrap justify-center gap-3">
+            {technologies.map((tech, index) => (
+              <span
+                key={tech}
+                className="px-4 py-2 bg-white/5 border border-white/10 rounded-lg text-sm text-slate-300 hover:border-[#6366f1]/50 hover:text-white hover:bg-[#6366f1]/10 transition-all cursor-default"
+                style={{
+                  animationDelay: `${index * 50}ms`,
+                }}
+              >
+                {tech}
+              </span>
+            ))}
+          </div>
         </div>
       </div>
     </section>

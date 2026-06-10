@@ -18,7 +18,6 @@ function Hero() {
     resize()
     window.addEventListener('resize', resize)
 
-    // Create particles
     for (let i = 0; i < 50; i++) {
       particles.push({
         x: Math.random() * canvas.width,
@@ -46,7 +45,6 @@ function Hero() {
         ctx.fill()
       })
 
-      // Draw connections
       particles.forEach((p1, i) => {
         particles.slice(i + 1).forEach((p2) => {
           const dx = p1.x - p2.x
@@ -87,6 +85,48 @@ function Hero() {
       id="home"
       className="relative flex flex-col items-center justify-center text-center min-h-screen px-6 overflow-hidden"
     >
+      {/* Animated Background Orbs with float animations */}
+      <div className="absolute inset-0 pointer-events-none overflow-hidden">
+        {/* Large floating orb - top left */}
+        <div
+          className="absolute -top-20 -left-20 w-[500px] h-[500px] rounded-full animate-float-slow"
+          style={{
+            background: 'radial-gradient(circle, rgba(99,102,241,0.15) 0%, transparent 70%)',
+            filter: 'blur(80px)',
+          }}
+        />
+        {/* Medium orb - bottom right */}
+        <div
+          className="absolute -bottom-32 -right-32 w-[600px] h-[600px] rounded-full animate-float"
+          style={{
+            background: 'radial-gradient(circle, rgba(20,184,166,0.12) 0%, transparent 70%)',
+            filter: 'blur(100px)',
+            animationDelay: '-5s',
+          }}
+        />
+        {/* Small accent orb - center */}
+        <div
+          className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[300px] h-[300px] rounded-full animate-pulse-glow"
+          style={{
+            background: 'radial-gradient(circle, rgba(99,102,241,0.08) 0%, transparent 70%)',
+            filter: 'blur(60px)',
+          }}
+        />
+        {/* Floating geometric shapes */}
+        <div
+          className="absolute top-[20%] right-[15%] w-20 h-20 rounded-2xl border border-[#6366f1]/10 animate-float"
+          style={{ animationDelay: '-2s' }}
+        />
+        <div
+          className="absolute bottom-[25%] left-[10%] w-16 h-16 rounded-full border border-[#14b8a6]/10 animate-float-slow"
+          style={{ animationDelay: '-8s' }}
+        />
+        <div
+          className="absolute top-[60%] right-[20%] w-12 h-12 rotate-45 border border-[#6366f1]/10 animate-float"
+          style={{ animationDelay: '-12s' }}
+        />
+      </div>
+
       {/* Particle Canvas */}
       <canvas
         ref={canvasRef}
@@ -122,7 +162,7 @@ function Hero() {
         <p className="max-w-xl mx-auto text-slate-400 text-lg mb-10 animate-fade-in-up delay-300 leading-relaxed">
           Full-Stack Developer based in{' '}
           <span className="text-[#14b8a6]">Nairobi, Kenya</span>. I craft
-          practical full-stack systems — from larg scale  management platforms to
+          practical full-stack systems — from church management platforms to
           e-commerce sites with local payment integrations.
         </p>
 
@@ -131,14 +171,12 @@ function Hero() {
             onClick={scrollToProjects}
             className="btn-primary group"
           >
-
             View my work
-
             <svg
-              className="w-20 h-8 transition-transform group-hover:translate-x-1"
+              className="w-4 h-4 transition-transform group-hover:translate-x-1"
               fill="none"
               stroke="currentColor"
-              viewBox="5 5 25 24"
+              viewBox="0 0 24 24"
             >
               <path
                 strokeLinecap="round"
