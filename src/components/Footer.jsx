@@ -1,3 +1,4 @@
+
 function Footer() {
   const currentYear = new Date().getFullYear()
 
@@ -35,8 +36,8 @@ function Footer() {
         <div className="flex flex-col md:flex-row items-center justify-between gap-6">
           {/* Logo & Copyright */}
           <div className="text-center md:text-left">
-            <a href="#home" className="text-xl font-bold text-white hover:text-[#6366f1] transition-colors">
-              Boaz<span className="text-[#6366f1]">.</span>
+            <a href="#home" className="text-xl font-bold text-white hover:text-[#ff3c01] transition-colors">
+              Boaz<span className="text-[#ff3c01]">.</span>
             </a>
             <p className="text-sm text-slate-500 mt-2">
               © {currentYear} Boaz Ndubi. All rights reserved.
@@ -64,7 +65,7 @@ function Footer() {
                 href={social.url}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="w-9 h-9 flex items-center justify-center rounded-lg bg-white/5 border border-white/10 text-slate-400 hover:text-white hover:border-[#6366f1]/50 hover:bg-[#6366f1]/10 transition-all"
+                className="w-9 h-9 flex items-center justify-center rounded-lg bg-white/5 border border-white/10 text-slate-400 hover:text-white hover:border-[#ff3c01]/50 hover:bg-[#ff3c01]/10 transition-all"
                 aria-label={social.name}
               >
                 {social.icon}
@@ -76,7 +77,7 @@ function Footer() {
         {/* Bottom text */}
         <div className="mt-8 pt-8 border-t border-white/5 text-center">
           <p className="text-xs text-slate-600">
-            Built with React, Vite & Tailwind CSS. Designed with love in Nairobi, Kenya.
+            © 2026 Boaz Ndubi. All rights reserved.
           </p>
         </div>
       </div>

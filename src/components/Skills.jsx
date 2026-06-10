@@ -1,3 +1,4 @@
+
 function Skills() {
   const skillCategories = [
     {
@@ -72,7 +73,7 @@ function Skills() {
                       className="h-full rounded-full transition-all duration-1000 ease-out"
                       style={{
                         width: `${skill.level}%`,
-                        background: 'linear-gradient(90deg, #6366f1, #14b8a6)',
+                        background: 'linear-gradient(90deg, #ff3c01, #fffb00)',
                         transitionDelay: `${skillIndex * 100}ms`,
                       }}
                     />
@@ -87,11 +88,11 @@ function Skills() {
       {/* Floating decorative elements */}
       <div className="relative">
         <div
-          className="absolute -top-10 -left-10 w-24 h-24 rounded-full border border-[#6366f1]/10 animate-float-slow hidden lg:block"
+          className="absolute -top-10 -left-10 w-24 h-24 rounded-full border border-[#ff3c01]/10 animate-float-slow hidden lg:block"
           style={{ animationDelay: '-3s' }}
         />
         <div
-          className="absolute -bottom-10 -right-10 w-20 h-20 rounded-2xl border border-[#14b8a6]/10 animate-float hidden lg:block"
+          className="absolute -bottom-10 -right-10 w-20 h-20 rounded-2xl border border-[#fffb00]/10 animate-float hidden lg:block"
           style={{ animationDelay: '-7s' }}
         />
 
@@ -104,7 +105,7 @@ function Skills() {
             {technologies.map((tech, index) => (
               <span
                 key={tech}
-                className="px-4 py-2 bg-white/5 border border-white/10 rounded-lg text-sm text-slate-300 hover:border-[#6366f1]/50 hover:text-white hover:bg-[#6366f1]/10 transition-all cursor-default"
+                className="px-4 py-2 bg-white/5 border border-white/10 rounded-lg text-sm text-slate-300 hover:border-[#ff3c01]/50 hover:text-white hover:bg-[#ff3c01]/10 transition-all cursor-default"
                 style={{
                   animationDelay: `${index * 50}ms`,
                 }}

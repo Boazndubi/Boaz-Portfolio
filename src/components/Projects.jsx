@@ -90,7 +90,7 @@ function Projects() {
             onClick={() => setFilter(f.id)}
             className={`px-4 py-2 rounded-lg text-sm font-medium transition-all cursor-pointer ${
               filter === f.id
-                ? 'bg-[#6366f1]/20 text-[#6366f1] border border-[#6366f1]/30'
+                ? 'bg-[#ff3c01]/20 text-[#ff3c01] border border-[#ff3c01]/30'
                 : 'bg-white/5 text-slate-400 border border-white/10 hover:border-white/20 hover:text-white'
             }`}
           >
@@ -108,13 +108,16 @@ function Projects() {
             style={{ animationDelay: `${index * 100}ms` }}
           >
             {/* Project Image Placeholder */}
-            <div className="h-48 bg-gradient-to-br from-[#6366f1]/20 to-[#14b8a6]/20 flex items-center justify-center relative overflow-hidden">
+            <div className="h-48 flex items-center justify-center relative overflow-hidden"
+              style={{
+                background: 'linear-gradient(135deg, rgba(255,60,1,0.15) 0%, rgba(255,251,0,0.1) 100%)'
+              }}
+            >
               <div className="text-6xl opacity-20">💻</div>
-              {/* Overlay on hover */}
-              <div className="absolute inset-0 bg-[#6366f1]/0 group-hover:bg-[#6366f1]/10 transition-all duration-300" />
+              <div className="absolute inset-0 bg-[#ff3c01]/0 group-hover:bg-[#ff3c01]/10 transition-all duration-300" />
 
               {project.featured && (
-                <span className="absolute top-4 right-4 px-3 py-1 bg-[#6366f1]/20 border border-[#6366f1]/30 rounded-full text-xs font-medium text-[#6366f1]">
+                <span className="absolute top-4 right-4 px-3 py-1 bg-[#ff3c01]/20 border border-[#ff3c01]/30 rounded-full text-xs font-medium text-[#ff3c01]">
                   Featured
                 </span>
               )}
@@ -122,7 +125,7 @@ function Projects() {
 
             {/* Content */}
             <div className="p-6">
-              <h3 className="text-xl font-semibold text-white mb-2 group-hover:text-[#6366f1] transition-colors">
+              <h3 className="text-xl font-semibold text-white mb-2 group-hover:text-[#ff3c01] transition-colors">
                 {project.title}
               </h3>
               <p className="text-slate-400 text-sm mb-4 leading-relaxed">
@@ -145,7 +148,7 @@ function Projects() {
               <div className="flex gap-4">
                 <a
                   href={project.links.demo}
-                  className="inline-flex items-center gap-2 text-sm text-[#6366f1] hover:text-[#818cf8] transition-colors"
+                  className="inline-flex items-center gap-2 text-sm text-[#ff3c01] hover:text-[#ff6b3d] transition-colors"
                 >
                   <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 12a3 3 0 11-6 0 3 3 0 016 0z" />

@@ -78,7 +78,7 @@ function Contact() {
               href={social.url}
               target="_blank"
               rel="noopener noreferrer"
-              className="w-12 h-12 flex items-center justify-center rounded-xl bg-white/5 border border-white/10 text-slate-400 hover:text-white hover:border-[#6366f1]/50 hover:bg-[#6366f1]/10 transition-all"
+              className="w-12 h-12 flex items-center justify-center rounded-xl bg-white/5 border border-white/10 text-slate-400 hover:text-white hover:border-[#ff3c01]/50 hover:bg-[#ff3c01]/10 transition-all"
               aria-label={social.name}
             >
               {social.icon}

@@ -6,9 +6,8 @@ function Navbar() {
 
   useEffect(() => {
     const handleScroll = () => {
-      setScrolled(window.scrollY > 20)
+      setScrolled(window.scrollY > 50)
 
-      // Determine active section
       const sections = ['home', 'about', 'skills', 'projects', 'contact']
       for (const section of sections.reverse()) {
         const element = document.getElementById(section)
@@ -52,9 +51,9 @@ function Navbar() {
         {/* Logo */}
         <button
           onClick={() => scrollToSection('home')}
-          className="text-xl font-bold text-white hover:text-[#6366f1] transition-colors cursor-pointer"
+          className="text-xl font-bold text-white hover:text-[#ff3c01] transition-colors cursor-pointer"
         >
-          Boaz Ndubi<span className="text-[#6366f1]">.</span>
+          Boaz<span className="text-[#ff3c01]">.</span>
         </button>
 
         {/* Nav Links */}
@@ -65,16 +64,16 @@ function Navbar() {
               onClick={() => scrollToSection(link.id)}
               className={`relative text-sm font-medium transition-colors cursor-pointer ${
                 activeSection === link.id
-                  ? 'text-[#6366f1]'
+                  ? 'text-[#ff3c01]'
                   : 'text-slate-400 hover:text-white'
               }`}
             >
-              <span className="font-mono text-[#6366f1] mr-1 text-xs">
+              <span className="font-mono text-[#ff3c01] mr-1 text-xs">
                 {String(navLinks.indexOf(link) + 1).padStart(2, '0')}.
               </span>
               {link.label}
               {activeSection === link.id && (
-                <span className="absolute -bottom-1 left-0 right-0 h-0.5 bg-[#6366f1] rounded-full" />
+                <span className="absolute -bottom-1 left-0 right-0 h-0.5 bg-[#ff3c01] rounded-full" />
               )}
             </button>
           ))}
@@ -83,7 +82,7 @@ function Navbar() {
         {/* CTA Button */}
         <a
           href="mailto:boazbundi1@gmail.com"
-          className="hidden md:inline-flex px-5 py-2.5 text-sm font-medium text-[#6366f1] border border-[#6366f1]/30 rounded-lg hover:bg-[#6366f1]/10 hover:border-[#6366f1] transition-all cursor-pointer"
+          className="hidden md:inline-flex px-5 py-2.5 text-sm font-medium text-[#ff3c01] border border-[#ff3c01]/30 rounded-lg hover:bg-[#ff3c01]/10 hover:border-[#ff3c01] transition-all cursor-pointer"
         >
           Let's Talk
         </a>

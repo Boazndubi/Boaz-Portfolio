@@ -18,7 +18,7 @@ function About() {
           <div className="space-y-4 text-slate-400 leading-relaxed">
             <p>
               Hello! I'm <span className="text-white font-medium">Boaz</span>, a passionate 
-              Full-Stack Developer based in <span className="text-[#14b8a6]">Nairobi, Kenya</span>. 
+              Full-Stack Developer based in <span style={{ color: '#fffb00' }}>Nairobi, Kenya</span>. 
               I specialize in building practical web applications that solve real problems.
             </p>
 
@@ -45,11 +45,11 @@ function About() {
           {/* Quick Info */}
           <div className="mt-8 flex flex-wrap gap-4">
             <div className="tag">
-              <span className="w-2 h-2 rounded-full bg-[#14b8a6] mr-2" />
+              <span className="w-2 h-2 rounded-full bg-[#fffb00] mr-2 inline-block" />
               Available for freelance
             </div>
             <div className="tag">
-              <span className="w-2 h-2 rounded-full bg-[#6366f1] mr-2" />
+              <span className="w-2 h-2 rounded-full bg-[#ff3c01] mr-2 inline-block" />
               Open to remote work
             </div>
           </div>

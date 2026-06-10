@@ -41,7 +41,7 @@ function Hero() {
 
         ctx.beginPath()
         ctx.arc(particle.x, particle.y, particle.radius, 0, Math.PI * 2)
-        ctx.fillStyle = `rgba(99, 102, 241, ${particle.opacity})`
+        ctx.fillStyle = `rgba(255, 60, 1, ${particle.opacity})`
         ctx.fill()
       })
 
@@ -55,7 +55,7 @@ function Hero() {
             ctx.beginPath()
             ctx.moveTo(p1.x, p1.y)
             ctx.lineTo(p2.x, p2.y)
-            ctx.strokeStyle = `rgba(99, 102, 241, ${0.1 * (1 - distance / 150)})`
+            ctx.strokeStyle = `rgba(255, 60, 1, ${0.1 * (1 - distance / 150)})`
             ctx.lineWidth = 0.5
             ctx.stroke()
           }
@@ -85,13 +85,13 @@ function Hero() {
       id="home"
       className="relative flex flex-col items-center justify-center text-center min-h-screen px-6 overflow-hidden"
     >
-      {/* Animated Background Orbs with float animations */}
+      {/* Animated Background Orbs with warm colors */}
       <div className="absolute inset-0 pointer-events-none overflow-hidden">
         {/* Large floating orb - top left */}
         <div
           className="absolute -top-20 -left-20 w-[500px] h-[500px] rounded-full animate-float-slow"
           style={{
-            background: 'radial-gradient(circle, rgba(99,102,241,0.15) 0%, transparent 70%)',
+            background: 'radial-gradient(circle, rgba(255,60,1,0.15) 0%, transparent 70%)',
             filter: 'blur(80px)',
           }}
         />
@@ -99,7 +99,7 @@ function Hero() {
         <div
           className="absolute -bottom-32 -right-32 w-[600px] h-[600px] rounded-full animate-float"
           style={{
-            background: 'radial-gradient(circle, rgba(20,184,166,0.12) 0%, transparent 70%)',
+            background: 'radial-gradient(circle, rgba(255,251,0,0.1) 0%, transparent 70%)',
             filter: 'blur(100px)',
             animationDelay: '-5s',
           }}
@@ -108,21 +108,21 @@ function Hero() {
         <div
           className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[300px] h-[300px] rounded-full animate-pulse-glow"
           style={{
-            background: 'radial-gradient(circle, rgba(99,102,241,0.08) 0%, transparent 70%)',
+            background: 'radial-gradient(circle, rgba(255,60,1,0.08) 0%, transparent 70%)',
             filter: 'blur(60px)',
           }}
         />
         {/* Floating geometric shapes */}
         <div
-          className="absolute top-[20%] right-[15%] w-20 h-20 rounded-2xl border border-[#6366f1]/10 animate-float"
+          className="absolute top-[20%] right-[15%] w-20 h-20 rounded-2xl border border-[#ff3c01]/10 animate-float"
           style={{ animationDelay: '-2s' }}
         />
         <div
-          className="absolute bottom-[25%] left-[10%] w-16 h-16 rounded-full border border-[#14b8a6]/10 animate-float-slow"
+          className="absolute bottom-[25%] left-[10%] w-16 h-16 rounded-full border border-[#fffb00]/10 animate-float-slow"
           style={{ animationDelay: '-8s' }}
         />
         <div
-          className="absolute top-[60%] right-[20%] w-12 h-12 rotate-45 border border-[#6366f1]/10 animate-float"
+          className="absolute top-[60%] right-[20%] w-12 h-12 rotate-45 border border-[#ff3c01]/10 animate-float"
           style={{ animationDelay: '-12s' }}
         />
       </div>
@@ -137,7 +137,7 @@ function Hero() {
       <div className="relative z-10 max-w-3xl mx-auto">
         <p
           className="font-mono text-sm mb-6 animate-fade-in-up"
-          style={{ color: '#14b8a6' }}
+          style={{ color: '#fffb00' }}
         >
           Hi, my name is
         </p>
@@ -145,7 +145,7 @@ function Hero() {
         <h1
           className="text-5xl sm:text-7xl lg:text-8xl font-bold mb-4 animate-fade-in-up delay-100"
           style={{
-            background: 'linear-gradient(135deg, #f8fafc 0%, #6366f1 50%, #14b8a6 100%)',
+            background: 'linear-gradient(135deg, #f8fafc 0%, #ff3c01 50%, #fffb00 100%)',
             WebkitBackgroundClip: 'text',
             WebkitTextFillColor: 'transparent',
             backgroundClip: 'text',
@@ -161,7 +161,7 @@ function Hero() {
 
         <p className="max-w-xl mx-auto text-slate-400 text-lg mb-10 animate-fade-in-up delay-300 leading-relaxed">
           Full-Stack Developer based in{' '}
-          <span className="text-[#14b8a6]">Nairobi, Kenya</span>. I craft
+          <span style={{ color: '#fffb00' }}>Nairobi, Kenya</span>. I craft
           practical full-stack systems — from church management platforms to
           e-commerce sites with local payment integrations.
         </p>
