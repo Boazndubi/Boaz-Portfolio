@@ -122,7 +122,7 @@ function Hero() {
         <p className="max-w-xl mx-auto text-slate-400 text-lg mb-10 animate-fade-in-up delay-300 leading-relaxed">
           Full-Stack Developer based in{' '}
           <span className="text-[#14b8a6]">Nairobi, Kenya</span>. I craft
-          practical full-stack systems — from church management platforms to
+          practical full-stack systems — from larg scale  management platforms to
           e-commerce sites with local payment integrations.
         </p>
 
@@ -131,12 +131,14 @@ function Hero() {
             onClick={scrollToProjects}
             className="btn-primary group"
           >
+
             View my work
+
             <svg
-              className="w-4 h-4 transition-transform group-hover:translate-x-1"
+              className="w-20 h-8 transition-transform group-hover:translate-x-1"
               fill="none"
               stroke="currentColor"
-              viewBox="0 0 24 24"
+              viewBox="5 5 25 24"
             >
               <path
                 strokeLinecap="round"

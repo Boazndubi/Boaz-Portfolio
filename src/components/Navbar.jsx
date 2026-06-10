@@ -6,7 +6,7 @@ function Navbar() {
 
   useEffect(() => {
     const handleScroll = () => {
-      setScrolled(window.scrollY > 50)
+      setScrolled(window.scrollY > 20)
 
       // Determine active section
       const sections = ['home', 'about', 'skills', 'projects', 'contact']
@@ -54,7 +54,7 @@ function Navbar() {
           onClick={() => scrollToSection('home')}
           className="text-xl font-bold text-white hover:text-[#6366f1] transition-colors cursor-pointer"
         >
-          Boaz<span className="text-[#6366f1]">.</span>
+          Boaz Ndubi<span className="text-[#6366f1]">.</span>
         </button>
 
         {/* Nav Links */}
