@@ -25,7 +25,7 @@ function About() {
             <p>
               My journey started with curiosity about how things work on the web, and it has 
               evolved into a career building everything from{' '}
-              <span className="text-white">church management platforms</span> to{' '}
+              <span className="text-white">full scale management platforms</span> to{' '}
               <span className="text-white">e-commerce sites</span> with local payment 
               integrations like M-Pesa.
             </p>
